@@ -1,0 +1,154 @@
+﻿@{
+	@using System.Drawing;
+	ViewData["Title"] = "Home Page";
+
+	@functions
+	{
+		private static Random r = new Random();
+
+		public string showCard(string num, string suit)
+		{
+			string card = num + suit + ".jpg";
+			return card;
+		}
+
+		public string[] deckGenerator()
+		{
+			string[] rutasImg = new string[40];
+			int count = 0;
+			for (int i = 0; i < 10; i++)
+			{
+				string espadas = (i + 1) + "Espadas.jpg";
+				string copas = (i + 1) + "Copas.jpg";
+				string oros = (i + 1) + "Oro.jpg";
+				string bastos = (i + 1) + "Bastos.jpg";
+
+				rutasImg[count++] = espadas;
+				rutasImg[count++] = copas;
+				rutasImg[count++] = oros;
+				rutasImg[count++] = bastos;
+			}
+			return rutasImg;
+		}
+
+		public static string GenerateRandomString()
+		{
+			String random = "";
+			int tamanio = r.Next(1, 20);
+
+			for (int i = 1; i <= tamanio; i++)
+			{
+				char randomChar = (char)r.Next('a', 'z');
+				random += randomChar;
+			}
+			return random;
+		}
+	}
+
+}
+
+<div class="text-center">
+	<h1 class="display-4">CONSOLA WEB</h1>
+	<p>Aquí programaremos nuestros ejercicios de consola, pero en la web.</p>
+</div>
+
+<p>
+	<!-- INICIO CONSOLA WEB-->
+	<h2>Ejercicio 1: Bucle</h2>
+<p>
+	Todas las notas del alumno:
+		@{
+			int num, sum = 0;
+			float average;
+
+			num = r.Next(1, 7);
+
+			int[] studentGrade = new int[num];
+
+			for (int i = 0; i < num; i++)
+			{
+				studentGrade[i] = r.Next(0, 10);
+				sum += studentGrade[i];
+		<p>@studentGrade[i]</p>
+			}
+			average = (float)sum / num;
+
+		<p>Nota más Alta: @studentGrade.Max()</p>
+		<p>Nota más Baja: @studentGrade.Min()</p>
+		<p>Nota Media: @average</p>
+		}
+	</p>
+
+<h2>Ejercicio 2: Array strings</h2>
+<p>
+	Muestro una lista de nombres:
+		@{
+			String string1 = GenerateRandomString();
+			String string2 = GenerateRandomString();
+			String string3 = GenerateRandomString();
+			String string4 = GenerateRandomString();
+			String string5 = GenerateRandomString();
+
+			string[] names = new string[] { string1, string2, string3, string4, string5 };
+			string[] copyNames = new string[names.Length];
+
+			Array.Copy(names, copyNames, names.Length);
+			Array.Reverse(copyNames);
+
+			<ul>
+					@foreach (string item in copyNames)
+					{
+					<li>@item</li>
+					}
+			</ul>
+		}
+</p>
+
+<h2>Ejercicio 3: Matriz aleatoria</h2>
+<p>Elementos de la matriz ordenados:
+
+		@{
+			int[] randomInts = new int[r.Next(2, 10)];
+
+			for (int i = 0; i < randomInts.Length; i++)
+			{
+				randomInts[i] = r.Next(1, 100);
+			}
+			Array.Sort(randomInts);
+
+			<ul>
+					@foreach (int item in randomInts)
+					{
+					<li>@item</li>
+					}
+			</ul>
+		}
+
+</p>
+
+<h2>Ejercicio 4: Matrices de Cartas</h2>
+<p>a) Todas las cartas de la baraja</p>
+<p>
+		@{
+			string[] urlImg = deckGenerator();
+
+			@foreach (string item in urlImg)
+			{
+			<img src="Cartas/@item" width="80" height="130" />
+			}
+		}
+</p>
+<p>b) Selector de Carta</p>
+<p>
+		@{
+		<img src="Cartas/@showCard("10","Bastos")" width="80" height="130" />
+		}
+</p>
+<p>c) Carta aleatoria</p>
+<p>
+		@{
+		<img src="Cartas/@urlImg[r.Next(0, 40)]" width="80" height="130" />
+		}
+</p>
+<!-- FIN CONSOLA WEB-->
+</p>

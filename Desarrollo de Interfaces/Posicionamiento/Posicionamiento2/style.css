@@ -1,0 +1,42 @@
+div{
+    border: 2px solid black;
+}
+
+div p{
+    margin-left: 10px;
+}
+
+#uno{
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    height: 150px;
+    width: 150px;
+    background-color: white;
+}
+
+#dos{
+    position: absolute;
+    left: 150px;
+    top: 120px;
+    height: 150px;
+    width: 150px;
+    background-color: white;
+}
+
+#tres{
+    position: absolute;
+    left: 50px;
+    top: 240px;
+    height: 120px;
+    width: 340px;
+    background-color: white;
+}
+
+#cuatro{
+    position: absolute;
+    left: 360px;
+    height: 290px;
+    width: 150px;
+    background-color: white;
+}
