@@ -1,0 +1,36 @@
+.header{
+    position: relative;
+    width: 800px;
+    height: 150px;
+    border: 2px solid black;
+}
+
+.logo{
+    position: absolute;
+    margin: 8px;
+    padding-left: 8px;
+    width: 300px;
+    height: 50px;
+    border: 2px solid black;
+}
+
+.menu{
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    padding-left: 8px;
+    width: 500px;
+    height: 20px;
+    border: 2px solid black;
+}
+
+.top_menu{
+    position: absolute;
+    margin-top: 8px;
+    padding-left: 8px;
+    height: 20px;
+    width: 200px;
+    right: 8px;
+    border: 2px solid black;
+}
+
