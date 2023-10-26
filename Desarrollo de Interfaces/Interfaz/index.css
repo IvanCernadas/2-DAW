@@ -1,0 +1,111 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h2{
+    margin-bottom: 0;
+}
+
+h3{
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: medium;
+}
+
+.curriculum{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.container_left{
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border: 3px solid black;
+    padding: 3% 2% 0;
+}
+
+.container_right {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    padding: 3% 0 0 30px;
+}
+
+.container_right h2:nth-child(3) {
+    margin-top: 20px;
+}
+
+.container_right p:nth-child(5){
+    margin-top: 0;
+}
+
+
+.imgs {
+    display: flex;
+    flex-direction: column;
+}
+  
+.item {
+    display: flex;
+    align-items: center;
+}
+  
+.item img {
+    margin-right: 10px;
+}
+
+.academicos p{
+    margin-top: 0;
+}
+
+
+.habilidades ul{
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.habilidadesIdiomas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+
+.habilidades, .idiomas {
+    width: 48%;
+    max-width: 300px;
+    height: auto;
+    padding: 0;
+}
+
+.habilidades li{
+    padding-bottom: 5px;
+}
+.idiomas p{
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    .curriculum {
+        flex-direction: column; 
+    }
+}
+
+@media (max-width: 480px) {
+    .container_left, .container_right {
+        max-width: 100%;
+        padding: 3% 3% 0;
+    }
+}
+
+
+
+
+
