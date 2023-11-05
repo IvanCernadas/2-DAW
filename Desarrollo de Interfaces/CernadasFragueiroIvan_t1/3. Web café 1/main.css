@@ -1,0 +1,48 @@
+body {
+  background-color: rgb(34, 34, 34);
+}
+
+.container {
+  color: rgb(255, 255, 255);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 30px;
+  margin: 20px;
+  letter-spacing: 3px;
+  color: rgb(255, 255, 255);
+}
+
+h2 {
+  letter-spacing: 2px;
+  font-size: 35px;
+  margin: 0;
+}
+
+.txt {
+  position: absolute;
+  width: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+}
+
+.button {
+  border: 2px solid white;
+  width: 200px;
+  height: 40px;
+
+  text-align: center;
+  letter-spacing: 2px;
+
+  line-height: 40px;
+
+  position: absolute;
+  left: 33%;
+}
