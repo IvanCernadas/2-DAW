@@ -1,0 +1,77 @@
+﻿@model IEnumerable<CernadasFragueiroIvanTarea4.Models.Pokemon>
+
+@{
+    ViewData["Title"] = "Lista Pokemons";
+}
+
+<h1>Lista</h1>
+
+<div asp-validation-summary="All" class="text-danger"></div>
+
+<form asp-asp-controller="Pokemon" asp-action="Filtrar">
+    <div> 
+        <label for="altura"></label>
+        <select id="altura">
+            <option value="0">Cualquier altura</option>
+        </select>
+
+        <label for="peso"></label>
+        <select id="peso">
+            <option value="0">Cualquier peso</option>
+        </select>
+
+        <label for="tipo"></label>
+        <select id="tipo">
+
+            <option value="0">Cualquier pokemon</option>
+        </select>
+
+        <button type="submit" class="btn btn-primary">Filtrar</button> 
+    </div>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.numero_pokedex)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.peso)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.altura)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.numero_pokedex)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.peso)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.altura)
+                </td>
+                <td>
+                    @Html.ActionLink("Agregar Equipo", "AgregarEquipo", new { id = item.numero_pokedex })
+                </td>
+                <td>
+                    @Html.ActionLink("Detalles", "Detalles", new { numero_pokedex = item.numero_pokedex, nombre = item.nombre, 
+                    peso = item.peso, altura = item.altura})
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

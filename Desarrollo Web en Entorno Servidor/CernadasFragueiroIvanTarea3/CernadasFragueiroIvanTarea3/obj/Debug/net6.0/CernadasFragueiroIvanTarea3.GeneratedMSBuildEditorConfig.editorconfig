@@ -1,0 +1,73 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = CernadasFragueiroIvanTarea3
+build_property.RootNamespace = CernadasFragueiroIvanTarea3
+build_property.ProjectDir = C:\Users\ivanc\source\repos\CernadasFragueiroIvanTarea3\CernadasFragueiroIvanTarea3\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\ivanc\source\repos\CernadasFragueiroIvanTarea3\CernadasFragueiroIvanTarea3
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/ivanc/source/repos/CernadasFragueiroIvanTarea3/CernadasFragueiroIvanTarea3/Views/Asignaturas/Detalles.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpZ25hdHVyYXNcRGV0YWxsZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ivanc/source/repos/CernadasFragueiroIvanTarea3/CernadasFragueiroIvanTarea3/Views/Asignaturas/Lista.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpZ25hdHVyYXNcTGlzdGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ivanc/source/repos/CernadasFragueiroIvanTarea3/CernadasFragueiroIvanTarea3/Views/Estudiantes/Detalles.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0dWRpYW50ZXNcRGV0YWxsZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ivanc/source/repos/CernadasFragueiroIvanTarea3/CernadasFragueiroIvanTarea3/Views/Estudiantes/Lista.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0dWRpYW50ZXNcTGlzdGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ivanc/source/repos/CernadasFragueiroIvanTarea3/CernadasFragueiroIvanTarea3/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ivanc/source/repos/CernadasFragueiroIvanTarea3/CernadasFragueiroIvanTarea3/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ivanc/source/repos/CernadasFragueiroIvanTarea3/CernadasFragueiroIvanTarea3/Views/MiCurriculum/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWlDdXJyaWN1bHVtXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ivanc/source/repos/CernadasFragueiroIvanTarea3/CernadasFragueiroIvanTarea3/Views/Profesores/Detalles.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzb3Jlc1xEZXRhbGxlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ivanc/source/repos/CernadasFragueiroIvanTarea3/CernadasFragueiroIvanTarea3/Views/Profesores/Lista.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzb3Jlc1xMaXN0YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ivanc/source/repos/CernadasFragueiroIvanTarea3/CernadasFragueiroIvanTarea3/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ivanc/source/repos/CernadasFragueiroIvanTarea3/CernadasFragueiroIvanTarea3/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ivanc/source/repos/CernadasFragueiroIvanTarea3/CernadasFragueiroIvanTarea3/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ivanc/source/repos/CernadasFragueiroIvanTarea3/CernadasFragueiroIvanTarea3/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ivanc/source/repos/CernadasFragueiroIvanTarea3/CernadasFragueiroIvanTarea3/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-cy6jxdl1ag

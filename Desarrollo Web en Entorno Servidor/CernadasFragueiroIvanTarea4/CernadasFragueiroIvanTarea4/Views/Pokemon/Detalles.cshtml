@@ -1,0 +1,60 @@
+﻿@model CernadasFragueiroIvanTarea4.Models.DetallesPokemonViewModel
+
+@{
+    ViewData["Title"] = "Info Pokemon";
+}
+
+<div>
+    <h4>Pokemon</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Pokemon.numero_pokedex)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Pokemon.numero_pokedex)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Pokemon.nombre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Pokemon.nombre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Pokemon.peso)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Pokemon.peso)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Pokemon.altura)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Pokemon.altura)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Evolucion)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Evolucion)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Involucion)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Involucion)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Movimiento)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Movimiento)
+        </dd>
+
+
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>
