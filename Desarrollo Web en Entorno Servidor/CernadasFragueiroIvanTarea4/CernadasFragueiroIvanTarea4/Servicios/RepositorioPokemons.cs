@@ -10,7 +10,13 @@ namespace CernadasFragueiroIvanTarea4.Servicios
         Task<string> EvolucionPokemon(int pokemon_origen);
         Task<Pokemon> MostrarPokemon(string nombre);
         Task<IEnumerable<Pokemon>> ObtenerPokemons();
+        Task<IEnumerable<double>> ObtenerAlturas();
         Task<List<Movimiento>> MovimientosPokemon(int numero_pokedex);
+        Task<IEnumerable<double>> ObtenerPesos();
+        Task<IEnumerable<string>> ObtenerTipoPokemon();
+        Task<IEnumerable<Pokemon>> FiltarAltura(double altura);
+        Task<IEnumerable<Pokemon>> FiltrarPeso(double peso);
+        Task<IEnumerable<Pokemon>> FiltrarTipo(string tipo);
     }
     public class RepositorioPokemons : IRepositorioPokemons
     {
@@ -25,6 +31,48 @@ namespace CernadasFragueiroIvanTarea4.Servicios
         {
             using var connection = new SqlConnection(connectionString);
             return await connection.QueryAsync<Pokemon>("Select numero_pokedex, nombre, peso, altura from Pokemon");
+        }
+
+        public async Task<IEnumerable<double>> ObtenerAlturas()
+        { 
+            using var connection = new SqlConnection(connectionString);
+            return await connection.QueryAsync<double>("select altura from pokemon group by altura order by altura asc");
+        }
+
+        public async Task<IEnumerable<double>> ObtenerPesos()
+        {
+            using var connection = new SqlConnection(connectionString);
+            return await connection.QueryAsync<double>("select peso from pokemon group by peso order by peso asc");
+        }
+
+        public async Task<IEnumerable<string>> ObtenerTipoPokemon()
+        {
+            using var connection = new SqlConnection(connectionString);
+            return await connection.QueryAsync<string>("select nombre from tipo inner join pokemon_tipo on tipo.id_tipo = pokemon_tipo.id_tipo group by nombre");
+        }
+
+        public async Task<IEnumerable<string>> ObtenerTipo()
+        {
+            using var connection = new SqlConnection(connectionString);
+            return await connection.QueryAsync<string>("");
+        }
+
+        public async Task<IEnumerable<Pokemon>> FiltarAltura(double altura) 
+        { 
+            using var connection = new SqlConnection(connectionString);
+            return await connection.QueryAsync<Pokemon>("select * from pokemon where pokemon.altura = @altura", new { altura});
+        }
+
+        public async Task<IEnumerable<Pokemon>> FiltrarPeso(double peso)
+        {
+            using var connection = new SqlConnection(connectionString);
+            return await connection.QueryAsync<Pokemon>("select * from pokemon where pokemon.peso = @peso", new { peso });
+        }
+
+        public async Task<IEnumerable<Pokemon>> FiltrarTipo(string tipo)
+        {
+            using var connection = new SqlConnection(connectionString);
+            return await connection.QueryAsync<Pokemon>("select p.* from Pokemon as p  inner join pokemon_tipo on p.numero_pokedex = pokemon_tipo.numero_pokedex inner join tipo on tipo.id_tipo = pokemon_tipo.id_tipo where tipo.nombre = @tipo", new { tipo });
         }
 
         public async Task<Pokemon> MostrarPokemon(string nombre) {

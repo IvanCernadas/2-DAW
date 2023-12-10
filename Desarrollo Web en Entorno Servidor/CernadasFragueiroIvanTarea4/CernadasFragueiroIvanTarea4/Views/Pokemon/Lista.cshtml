@@ -1,4 +1,4 @@
-﻿@model IEnumerable<CernadasFragueiroIvanTarea4.Models.Pokemon>
+﻿@model CernadasFragueiroIvanTarea4.Models.ListaPokemonViewModel
 
 @{
     ViewData["Title"] = "Lista Pokemons";
@@ -6,25 +6,38 @@
 
 <h1>Lista</h1>
 
-<div asp-validation-summary="All" class="text-danger"></div>
-
 <form asp-asp-controller="Pokemon" asp-action="Filtrar">
     <div> 
         <label for="altura"></label>
-        <select id="altura">
+        <select id="altura" name="altura">
             <option value="0">Cualquier altura</option>
+            @foreach (var altura in Model.Alturas)
+            {
+                <option value="@altura">@altura</option>    
+            }
         </select>
 
         <label for="peso"></label>
-        <select id="peso">
+        <select id="peso" name="peso">
             <option value="0">Cualquier peso</option>
+            @foreach (var peso in Model.Pesos)
+            {
+                <option value="@peso">@peso</option>
+            }
         </select>
 
         <label for="tipo"></label>
-        <select id="tipo">
-
+        <select id="tipo" name="tipo">
             <option value="0">Cualquier pokemon</option>
+            @foreach (var tipo in Model.Tipos)
+            {
+                <option value="@tipo">@tipo</option>
+            }
         </select>
+
+        <input type="hidden" id="AlturaSeleccionada" name="AlturaSeleccionada" />
+        <input type="hidden" id="PesoSeleccionado" name="PesoSeleccionado" />
+        <input type="hidden" id="TipoSeleccionado" name="TipoSeleccionado" />
 
         <button type="submit" class="btn btn-primary">Filtrar</button> 
     </div>
@@ -34,22 +47,22 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.numero_pokedex)
+                Número Pokedex
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.nombre)
+                Nombre
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.peso)
+                Peso
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.altura)
+                Altura
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+        @foreach (var item in Model.Pokemons)
         {
             <tr>
                 <td>
